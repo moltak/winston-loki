@@ -21,6 +21,7 @@ class LokiTransport extends Transport {
     this.batcher = new Batcher({
       host: options.host,
       basicAuth: options.basicAuth,
+      bearer: options.bearer,
       headers: options.headers || {},
       interval: options.interval,
       json: options.json,

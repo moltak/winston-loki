@@ -36,6 +36,11 @@ class Batcher {
       this.options.headers = Object.assign(this.options.headers, { 'Authorization': basicAuth })
     }
 
+    if (options.bearer) {
+      const bearer = `Bearer ${options.bearer}`
+      this.options.headers = Object.assign(this.options.headers, { 'Authorization': bearer })
+    }
+
     // Define the batching intervals
     this.interval = this.options.interval
       ? Number(this.options.interval) * 1000
